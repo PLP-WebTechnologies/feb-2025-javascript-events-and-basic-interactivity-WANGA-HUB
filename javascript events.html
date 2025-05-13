@@ -1,0 +1,70 @@
+#index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartoon World</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Cartoon World! 🎨✨</h1>
+    </header>
+
+    <section class="gallery">
+        <h2>Meet the Characters</h2>
+        <img src="https://imgs.search.brave.com/2PZQ1Xb9l7Wnenx1Rv_69gTSD-XVSuAyZtZnjOvgyJI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNDU4/NTg2MjI3L3Bob3Rv/L2ZpZ3VyZS1vZi1z/bXVyZi1zaXR0aW5n/LW9uLWRpcmVjdG9y/LWNoYWlyLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1RdVU3/ZzZuWFBPd3JyYUZ0/eHBJOHdqZ01LbjlM/bzJHYWhDeFVFOWZl/RVZ3PQ" class="character">
+        <img src="https://imgs.search.brave.com/xPCli7IqcHH6-IQEwbDZnciJKUrasGcmpPwxpve_YNI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxOC8w/MS8wMy8wMC81NS9t/aW5pb24tMzA1NzM3/Nl82NDAuanBn" class="character">
+        <img src="https://imgs.search.brave.com/vmgv1cXM0fM1CedcK5xwXNTr_TufX4QzTxvgBu9-ev8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvdHJv/bGxzLTE1MDAteC0x/MTQ2LXBpY3R1cmUt/NDN5Z3B1MDl1NzRx/cGhieC5qcGc" class="character">
+    </section>
+
+    <button id="jokeButton">Click for a Cartoon Joke! 🤣</button>
+    <p id="jokeText"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+#style.css
+body {
+    font-family: "Comic Sans MS", sans-serif;
+    text-align: center;
+    background-color: lightblue;
+}
+
+header {
+    background-color: yellow;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 150px;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.2);
+}
+
+button {
+    font-size: 18px;
+    padding: 10px;
+    background-color: orange;
+    border: none;
+    cursor: pointer;
+}
+
+#script.js
+document.getElementById("jokeButton").addEventListener("click", function() {
+    const jokes = [
+        "Why did the cartoon character sit by the window? He wanted to draw some attention!",
+        "What do you call a mischievous cartoon dog? A barktoon!",
+        "Why do cartoons always look so cheerful? They draw their happiness!"
+    ];
+    let randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+    document.getElementById("jokeText").textContent = randomJoke;
+});
